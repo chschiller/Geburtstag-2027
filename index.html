@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einladung zu meinem 30. Geburtstag – Charlotte | Gutshaus Groß Markow 2027</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Playfair Display, Plus Jakarta Sans & Caveat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        hand: ['Caveat', 'cursive'],
+                    },
+                    colors: {
+                        cream: '#FAF7F2',
+                        sand: '#EFE9DF',
+                        sage: '#4A5D4E',
+                        sageLight: '#E8EDE9',
+                        terracotta: '#C26D4F',
+                        gold: '#B8924A',
+                        charcoal: '#262926',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAF7F2;
+            color: #262926;
+            overflow-x: hidden;
+        }
+
+        /* Polaroid-Karten Stil */
+        .polaroid {
+            background: #FFFFFF;
+            padding: 12px 12px 34px 12px;
+            box-shadow: 0 16px 36px rgba(38, 41, 38, 0.14), 0 3px 10px rgba(0, 0, 0, 0.06);
+            border-radius: 4px;
+            transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), z-index 0.1s;
+        }
+
+        .polaroid:hover {
+            transform: scale(1.04) rotate(0deg) !important;
+            z-index: 30;
+        }
+
+        /* Hintergrund-Polaroids (fixierte Collage) */
+        .bg-polaroid {
+            background: rgba(255, 255, 255, 0.90);
+            padding: 10px 10px 28px 10px;
+            box-shadow: 0 12px 28px rgba(38, 41, 38, 0.12);
+            border-radius: 4px;
+        }
+
+        /* Glasmorphismus-Karten für lesbare Texte über der Collage */
+        .glass-card {
+            background: rgba(250, 247, 242, 0.93);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(184, 146, 74, 0.28);
+        }
+
+        /* Druckansicht */
+        @media print {
+            body {
+                background: #FAF7F2 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .glass-card {
+                background: #FFFFFF !important;
+                box-shadow: none !important;
+                border: 1px solid #D6CFC2 !important;
+            }
+            .print-break-inside {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body class="relative min-h-screen font-sans antialiased selection:bg-terracotta/20 selection:text-charcoal">
+
+    <!-- ===================================================================== -->
+    <!-- HINTERGRUND-FOTOCOLLAGE (Fixierte Polaroids mit foto1.jpg - foto4.jpg) -->
+    <!-- ===================================================================== -->
+    <div aria-hidden="true" class="fixed inset-0 pointer-events-none overflow-hidden z-0 opacity-45 sm:opacity-55">
+        <div class="absolute inset-0 bg-gradient-to-b from-cream/35 via-transparent to-cream/70 z-10"></div>
+
+        <!-- Hintergrund Polaroid 1: Oben Links (Tretauto -> foto1.jpg) -->
+        <div class="bg-polaroid absolute -top-6 -left-10 sm:left-6 w-48 sm:w-64 -rotate-12">
+            <div class="aspect-[4/3] w-full overflow-hidden bg-sand rounded-sm">
+                <img data-photo-slot="1" src="foto1.jpg" alt="Vollgas voraus" onerror="handleImgFallback(this, 1)" class="w-full h-full object-cover">
+            </div>
+            <p class="font-hand text-center text-charcoal/85 text-lg mt-1">Vollgas voraus!</p>
+        </div>
+
+        <!-- Hintergrund Polaroid 2: Oben Rechts (Großes Glas -> foto3.jpg) -->
+        <div class="bg-polaroid absolute top-12 -right-12 sm:right-8 w-48 sm:w-64 rotate-12">
+            <div class="aspect-[4/3] w-full overflow-hidden bg-sand rounded-sm">
+                <img data-photo-slot="3" src="foto3.jpg" alt="Einen heben" onerror="handleImgFallback(this, 3)" class="w-full h-full object-cover">
+            </div>
+            <p class="font-hand text-center text-charcoal/85 text-lg mt-1">Früh übt sich...</p>
+        </div>
+
+        <!-- Hintergrund Polaroid 3: Mitte Links (Kuscheltier -> foto2.jpg) -->
+        <div class="bg-polaroid hidden md:block absolute top-1/2 -left-12 w-60 rotate-6">
+            <div class="aspect-[4/3] w-full overflow-hidden bg-sand rounded-sm">
+                <img data-photo-slot="2" src="foto2.jpg" alt="Dancefloor" onerror="handleImgFallback(this, 2)" class="w-full h-full object-cover">
+            </div>
+            <p class="font-hand text-center text-charcoal/85 text-lg mt-1">Wild &amp; ungezähmt</p>
+        </div>
+
+        <!-- Hintergrund Polaroid 4: Unten Rechts (Stuhl -> foto4.jpg) -->
+        <div class="bg-polaroid absolute bottom-8 -right-8 sm:right-12 w-48 sm:w-64 -rotate-6">
+            <div class="aspect-[4/3] w-full overflow-hidden bg-sand rounded-sm">
+                <img data-photo-slot="4" src="foto4.jpg" alt="Müde aber glücklich" onerror="handleImgFallback(this, 4)" class="w-full h-full object-cover">
+            </div>
+            <p class="font-hand text-center text-charcoal/85 text-lg mt-1">Jetzt ist aber gut!</p>
+        </div>
+
+        <!-- Hintergrund Polaroid 5: Unten Links (Wiederholung foto1.jpg für Collage-Tiefe) -->
+        <div class="bg-polaroid hidden sm:block absolute -bottom-10 left-8 w-56 rotate-12">
+            <div class="aspect-[4/3] w-full overflow-hidden bg-sand rounded-sm">
+                <img data-photo-slot="1" src="foto1.jpg" alt="30 Jahre" onerror="handleImgFallback(this, 1)" class="w-full h-full object-cover">
+            </div>
+            <p class="font-hand text-center text-charcoal/85 text-lg mt-1">30 Jahre Wirbelwind</p>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- KOPFLEISTE (Orga & Belegungsplan + Drucken)                           -->
+    <!-- ===================================================================== -->
+    <nav class="no-print sticky top-0 z-40 bg-charcoal/95 text-cream backdrop-blur-md border-b border-gold/30 px-4 py-2.5 shadow-md">
+        <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2 text-xs sm:text-sm">
+                <span id="firebase-dot" class="inline-block w-2.5 h-2.5 rounded-full bg-gold animate-pulse"></span>
+                <span class="font-semibold tracking-wide">Charlottes 30. Geburtstag</span>
+                <span class="hidden md:inline text-cream/70">• Gutshaus Groß Markow 2027</span>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+                <button type="button" onclick="toggleAdminModal()" class="px-3.5 py-1.5 rounded-full bg-gold hover:bg-gold/90 text-white text-xs font-semibold transition flex items-center gap-1.5 shadow-sm cursor-pointer">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                    <span>Orga &amp; Belegungsplan</span>
+                </button>
+                <button type="button" onclick="window.print()" class="px-3 py-1.5 rounded-full bg-sage hover:bg-sage/90 text-white text-xs font-medium transition flex items-center gap-1.5 cursor-pointer">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                    <span class="hidden sm:inline">Drucken</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================================================================== -->
+    <!-- HAUPTINHALT DER EINLADUNG                                             -->
+    <!-- ===================================================================== -->
+    <main class="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-14 space-y-8 sm:space-y-12">
+
+        <!-- 1. HERO / BEGRÜSSUNG IN CHARLOTTES ICH-PERSPEKTIVE -->
+        <header class="glass-card rounded-3xl p-6 sm:p-12 text-center shadow-xl relative overflow-hidden print-break-inside">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sageLight text-sage text-xs sm:text-sm font-semibold tracking-wider uppercase mb-5 border border-sage/20">
+                <span>Save the Date</span>
+                <span>•</span>
+                <span>10. September 2027</span>
+            </div>
+
+            <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-charcoal leading-tight mb-6">
+                Einladung zu <span class="text-terracotta italic">meinem 30. Geburtstag!</span>
+            </h1>
+
+            <div class="w-24 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-6"></div>
+
+            <p class="text-base sm:text-lg md:text-xl text-charcoal/85 max-w-2xl mx-auto leading-relaxed">
+                Wahnsinn, wie die Zeit vergeht – aus dem kleinen Wirbelwind von damals wird nun tatsächlich eine <span class="font-semibold text-charcoal">„alte“ 30-Jährige</span>! 
+                Ich lade euch herzlich ein, diesen runden Meilenstein gebührend mit mir zu feiern. Und weil sich manche Dinge bei mir seit Kindheitstagen glücklicherweise nie geändert haben, gibt’s mein Programm für diese Tage direkt im Bild vorab:
+            </p>
+        </header>
+
+        <!-- 2. LIVE-STATUS-ANZEIGE (ZUSAGEQUOTE & ZIMMERBELEGUNG) -->
+        <section aria-label="Live-Status" class="glass-card rounded-3xl p-6 sm:p-8 shadow-xl border border-gold/40 print-break-inside">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-6">
+                <div class="flex items-center gap-2.5">
+                    <span class="relative flex h-3 w-3">
+                        <span id="live-ping-ring" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
+                        <span id="live-ping-dot" class="relative inline-flex rounded-full h-3 w-3 bg-gold"></span>
+                    </span>
+                    <h2 class="font-serif text-xl sm:text-2xl font-bold text-charcoal">Live-Status: Zusagen &amp; Zimmer</h2>
+                </div>
+                <span id="live-sync-badge" class="text-xs font-medium px-3 py-1 rounded-full bg-gold/15 text-charcoal">
+                    Verbinde mit Cloud...
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Zusagequote -->
+                <div class="bg-white/90 rounded-2xl p-5 border border-sand shadow-sm">
+                    <div class="flex items-baseline justify-between mb-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-terracotta">Aktuelle Zusagequote</span>
+                        <span id="stat-rsvp-percent" class="font-serif text-2xl font-bold text-charcoal">0 %</span>
+                    </div>
+                    <div class="w-full h-3 bg-sand rounded-full overflow-hidden mb-3">
+                        <div id="stat-rsvp-bar" class="h-full bg-gradient-to-r from-terracotta to-gold rounded-full transition-all duration-700" style="width: 0%"></div>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm text-charcoal/80">
+                        <span><strong id="stat-yes-people" class="text-charcoal">0</strong> Zusagen (Personen)</span>
+                        <span><strong id="stat-responded-people" class="text-charcoal">0</strong> von <strong id="stat-invited-total" class="text-charcoal">38</strong> eingeladen</span>
+                    </div>
+                </div>
+
+                <!-- Zimmerbelegung (19 Doppelzimmer) -->
+                <div class="bg-white/90 rounded-2xl p-5 border border-sand shadow-sm">
+                    <div class="flex items-baseline justify-between mb-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-sage">Zimmerbelegung (Gutshaus)</span>
+                        <span id="stat-rooms-text" class="font-serif text-2xl font-bold text-charcoal">0 / 19</span>
+                    </div>
+                    <div class="w-full h-3 bg-sand rounded-full overflow-hidden mb-3">
+                        <div id="stat-rooms-bar" class="h-full bg-gradient-to-r from-sage to-emerald-600 rounded-full transition-all duration-700" style="width: 0%"></div>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm text-charcoal/80">
+                        <span><strong id="stat-rooms-booked" class="text-charcoal">0</strong> von 19 Doppelschlafzimmern belegt</span>
+                        <span class="text-sage font-semibold"><span id="stat-rooms-free">19</span> frei</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. DIE 4 PARTY-SYNONYME MIT KINDERBILDERN (foto1.jpg bis foto4.jpg) -->
+        <section aria-label="Party-Programm" class="space-y-6">
+            <div class="text-center">
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-charcoal inline-block px-6 py-2 rounded-full glass-card shadow-sm">
+                    Was ich mit euch vorhabe
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+
+                <!-- KARTE 1: foto1.jpg (Tretauto -> Vollgas & keine Bremsen) -->
+                <article class="glass-card rounded-3xl p-5 sm:p-6 shadow-lg flex flex-col justify-between print-break-inside">
+                    <div>
+                        <div class="polaroid mb-5 -rotate-1 mx-auto max-w-xs">
+                            <div class="aspect-[4/3] w-full overflow-hidden bg-sand rounded-sm">
+                                <img data-photo-slot="1" src="foto1.jpg" alt="Kind auf Tretauto" onerror="handleImgFallback(this, 1)" class="w-full h-full object-cover">
+                            </div>
+                            <p class="font-hand text-center text-charcoal text-xl mt-2">Volle Fahrt voraus!</p>
+                        </div>
+                        <div class="flex items-center gap-2.5 mb-2">
+                            <span class="w-7 h-7 rounded-full bg-terracotta text-white font-serif font-bold text-sm flex items-center justify-center shrink-0">1</span>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-charcoal">Vollgas &amp; keine Bremsen!</h3>
+                        </div>
+                        <p class="text-charcoal/80 text-sm sm:text-base leading-relaxed">
+                            Wenn ich feiere, dann richtig und mit voller Fahrt voraus. Gemeinsam mit euch gebe ich dem Alltag für ein paar Tage ordentlich das Nachsehen!
+                        </p>
+                    </div>
+                </article>
+
+                <!-- KARTE 2: foto3.jpg (Großes Glas -> Mit euch einen heben) -->
+                <article class="glass-card rounded-3xl p-5 sm:p-6 shadow-lg flex flex-col justify-between print-break-inside">
+                    <div>
+                        <div class="polaroid mb-5 rotate-1 mx-auto max-w-xs">
+                            <div class="aspect-[4/3] w-full overflow-hidden bg-sand rounded-sm">
+                                <img data-photo-slot="3" src="foto3.jpg" alt="Kind mit großem Glas" onerror="handleImgFallback(this, 3)" class="w-full h-full object-cover">
+                            </div>
+                            <p class="font-hand text-center text-charcoal text-xl mt-2">Auf das Leben &amp; meine 30!</p>
+                        </div>
+                        <div class="flex items-center gap-2.5 mb-2">
+                            <span class="w-7 h-7 rounded-full bg-gold text-white font-serif font-bold text-sm flex items-center justify-center shrink-0">2</span>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-charcoal">Mit euch einen heben!</h3>
+                        </div>
+                        <p class="text-charcoal/80 text-sm sm:text-base leading-relaxed">
+                            Ob auf meinen 30. oder einfach auf das Leben – ich möchte mit euch anstoßen, bis das Glas leer ist. <span class="italic text-charcoal/70">(Früh übt sich, wie man sieht!)</span>
+                        </p>
+                    </div>
+                </article>
+
+                <!-- KARTE 3: foto2.jpg (Kuscheltier -> Die Tanzfläche auseinandernehmen) -->
+                <article class="glass-card rounded-3xl p-5 sm:p-6 shadow-lg flex flex-col justify-between print-break-inside">
+                    <div>
+                        <div class="polaroid mb-5 rotate-1 mx-auto max-w-xs">
+                            <div class="aspect-[4/3] w-full overflow-hidden bg-sand rounded-sm">
+                                <img data-photo-slot="2" src="foto2.jpg" alt="Kind auf Kuscheltier" onerror="handleImgFallback(this, 2)" class="w-full h-full object-cover">
+                            </div>
+                            <p class="font-hand text-center text-charcoal text-xl mt-2">Dancefloor-Abriss!</p>
+                        </div>
+                        <div class="flex items-center gap-2.5 mb-2">
+                            <span class="w-7 h-7 rounded-full bg-sage text-white font-serif font-bold text-sm flex items-center justify-center shrink-0">3</span>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-charcoal">Die Tanzfläche auseinandernehmen!</h3>
+                        </div>
+                        <p class="text-charcoal/80 text-sm sm:text-base leading-relaxed">
+                            Keine Gnade für die Beine: Ich will mit euch den Dancefloor brennen lassen – es wird wild, bis die Lichter ausgehen.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- KARTE 4: foto4.jpg (Stuhl -> Und am Ende... müde, aber glücklich) -->
+                <article class="glass-card rounded-3xl p-5 sm:p-6 shadow-lg flex flex-col justify-between print-break-inside">
+                    <div>
+                        <div class="polaroid mb-5 -rotate-1 mx-auto max-w-xs">
+                            <div class="aspect-[4/3] w-full overflow-hidden bg-sand rounded-sm">
+                                <img data-photo-slot="4" src="foto4.jpg" alt="Kind chillig im Stuhl" onerror="handleImgFallback(this, 4)" class="w-full h-full object-cover">
+                            </div>
+                            <p class="font-hand text-center text-charcoal text-xl mt-2">„Jetzt ist aber mal gut!“</p>
+                        </div>
+                        <div class="flex items-center gap-2.5 mb-2">
+                            <span class="w-7 h-7 rounded-full bg-charcoal text-white font-serif font-bold text-sm flex items-center justify-center shrink-0">4</span>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-charcoal">Und am Ende... müde, aber glücklich!</h3>
+                        </div>
+                        <p class="text-charcoal/80 text-sm sm:text-base leading-relaxed">
+                            Spätestens wenn mir die Puste ausgeht, lassen wir die Tage gemütlich ausklingen. Aber bis dahin gilt: Volles Programm!
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 4. WANN & WO + GEMEINSAME ZEIT & ÜBERNACHTUNG -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 print-break-inside">
+            <!-- Wann & Wo -->
+            <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-lg border-t-4 border-t-terracotta flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-2xl bg-terracotta/15 text-terracotta flex items-center justify-center">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <h2 class="font-serif text-2xl font-bold text-charcoal">Wann &amp; Wo?</h2>
+                    </div>
+
+                    <ul class="space-y-4 text-charcoal/90">
+                        <li class="bg-white/80 rounded-2xl p-4 border border-sand">
+                            <span class="block text-xs uppercase tracking-wider text-terracotta font-semibold mb-1">Datum der Hauptfeier</span>
+                            <span class="font-serif text-xl font-bold text-charcoal">Freitag, 10. September 2027</span>
+                        </li>
+                        <li class="bg-white/80 rounded-2xl p-4 border border-sand">
+                            <span class="block text-xs uppercase tracking-wider text-terracotta font-semibold mb-1">Location</span>
+                            <span class="font-bold text-lg text-charcoal block">Gutshaus Groß Markow</span>
+                            <span class="text-sm text-charcoal/75">Am Anger 9, 17168 Lelkendorf, Deutschland</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-5 flex flex-wrap items-center gap-4 no-print">
+                    <a href="https://maps.google.com/?q=Gutshaus+Groß+Markow,+Am+Anger+9,+17168+Lelkendorf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-terracotta hover:text-charcoal transition">
+                        <span>Google Maps</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                    <a href="https://www.hellberg-domizil.com/gutshaus-gross-markow/ausstattung/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-sage hover:text-charcoal transition">
+                        <span>Zur Gutshaus-Ausstattung</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gemeinsame Zeit & Schlafplätze -->
+            <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-lg border-t-4 border-t-sage">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-2xl bg-sage/15 text-sage flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    </div>
+                    <h2 class="font-serif text-2xl font-bold text-charcoal">Gemeinsame Zeit &amp; Schlafplätze</h2>
+                </div>
+
+                <div class="space-y-3.5 text-sm sm:text-base text-charcoal/85 leading-relaxed">
+                    <p>
+                        Das Gutshaus steht uns exklusiv vom <strong class="text-sage font-semibold">Samstag, 04. September bis Sonntag, 12. September 2027</strong> zur Verfügung. Wer möchte, kann also gerne schon ab dem 04.09. anreisen und ein paar gemeinsame Tage mit mir dort verbringen!
+                    </p>
+                    <div class="bg-sageLight/85 rounded-2xl p-4 border border-sage/20 space-y-2 text-sm">
+                        <p class="flex items-start gap-2">
+                            <span class="text-sage font-bold">✓</span>
+                            <span><strong>19 Doppelschlafzimmer</strong> auf 3 Etagen (Bel Etage: 5 DZ + 6 Bäder, Obergeschoss: 11 DZ + 3 Bäder, Dachgeschoss: 3 DZ + 1 Bad).</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <span class="text-sage font-bold">✓</span>
+                            <span><strong>Partner/in sind natürlich herzlich willkommen!</strong></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. HIGHLIGHTS DER GUTSHAUS-AUSSTATTUNG -->
+        <section aria-label="Gutshaus Highlights" class="glass-card rounded-3xl p-6 sm:p-8 shadow-lg print-break-inside">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-gold">1.000 m² Wohnfläche &amp; 15.000 m² Park</span>
+                    <h2 class="font-serif text-2xl font-bold text-charcoal">Highlights vor Ort im Gutshaus Groß Markow</h2>
+                </div>
+                <a href="https://www.hellberg-domizil.com/gutshaus-gross-markow/ausstattung/" target="_blank" rel="noopener noreferrer" class="no-print px-4 py-2 rounded-full bg-sageLight hover:bg-sage hover:text-white text-sage text-xs sm:text-sm font-semibold transition">
+                    Alle Details &amp; Bilder ansehen →
+                </a>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-center">
+                <div class="bg-white/85 rounded-2xl p-4 border border-sand">
+                    <span class="block font-serif text-lg font-bold text-charcoal mb-1">19 Doppelzimmer</span>
+                    <span class="text-xs text-charcoal/75">Bel Etage, Ober- &amp; Dachgeschoss</span>
+                </div>
+                <div class="bg-white/85 rounded-2xl p-4 border border-sand">
+                    <span class="block font-serif text-lg font-bold text-charcoal mb-1">Pool &amp; Wellness</span>
+                    <span class="text-xs text-charcoal/75">32 m² Indoor-Pool, Whirlpool &amp; 2 Saunen</span>
+                </div>
+                <div class="bg-white/85 rounded-2xl p-4 border border-sand">
+                    <span class="block font-serif text-lg font-bold text-charcoal mb-1">Ovaler Festsaal</span>
+                    <span class="text-xs text-charcoal/75">Perfekt zum Feiern, Dinieren &amp; Tanzen</span>
+                </div>
+                <div class="bg-white/85 rounded-2xl p-4 border border-sand">
+                    <span class="block font-serif text-lg font-bold text-charcoal mb-1">Action &amp; Spiele</span>
+                    <span class="text-xs text-charcoal/75">Billard, Kicker, Tischtennis, Dart &amp; Park</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. RÜCKMELDUNG & ONLINE-RSVP-FORMULAR MIT DUPLIKATSCHUTZ -->
+        <section id="rsvp-section" class="glass-card rounded-3xl p-6 sm:p-10 shadow-xl border border-gold/40 print-break-inside">
+            <div class="max-w-2xl mx-auto text-center mb-6">
+                <span class="inline-block px-3.5 py-1 rounded-full bg-terracotta/15 text-terracotta text-xs font-bold uppercase tracking-wider mb-3">
+                    Rückmeldung bis 31. März 2027
+                </span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-charcoal mb-3">
+                    Gebt mir bitte bis zum 31.03.2027 Bescheid
+                </h2>
+                <p class="text-charcoal/80 text-sm sm:text-base">
+                    Damit ich die 19 Doppelzimmer und unsere Tage im Gutshaus perfekt planen kann, tragt eure Rückmeldung (inkl. Partner/in sowie eurem genauen An- und Abreisedatum) bitte direkt hier ein:
+                </p>
+            </div>
+
+            <!-- Persönliche Bestätigungskarte (erscheint nach Absenden auf diesem Gerät -> Browser-Duplikatschutz) -->
+            <div id="rsvp-already-submitted-card" class="hidden no-print bg-white/95 rounded-2xl p-6 sm:p-8 border-2 border-sage/40 max-w-2xl mx-auto shadow-md space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-sage text-white flex items-center justify-center font-bold text-lg shrink-0">✓</div>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-sage">Deine Rückmeldung ist eingegangen</span>
+                        <h3 id="submitted-card-title" class="font-serif text-xl sm:text-2xl font-bold text-charcoal">Vielen Dank!</h3>
+                    </div>
+                </div>
+                <div id="submitted-card-details" class="bg-cream rounded-xl p-4 border border-sand text-sm text-charcoal/85 space-y-1.5">
+                    <!-- Dynamisch befüllt -->
+                </div>
+                <p class="text-xs text-charcoal/65 leading-relaxed">
+                    Um Doppelbuchungen zu vermeiden, ist pro Person und Gerät nur eine Anmeldung möglich. Falls sich bei deinen Plänen noch etwas ändert, gib mir einfach kurz persönlich Bescheid.
+                </p>
+            </div>
+
+            <!-- Anmeldeformular -->
+            <form id="rsvp-form" onsubmit="submitRsvpForm(event)" class="no-print bg-white/95 rounded-2xl p-5 sm:p-7 border border-gold/30 max-w-2xl mx-auto shadow-md space-y-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                    <!-- Name -->
+                    <div>
+                        <label for="rsvp-name" class="block text-xs font-bold uppercase tracking-wider text-charcoal/75 mb-1.5">Dein Vor- &amp; Nachname *</label>
+                        <input type="text" id="rsvp-name" required placeholder="z.B. Max Mustermann" class="w-full px-3.5 py-2.5 rounded-xl border border-sand bg-cream/60 focus:outline-none focus:border-terracotta">
+                    </div>
+
+                    <!-- Zusage / Absage -->
+                    <div>
+                        <label for="rsvp-status" class="block text-xs font-bold uppercase tracking-wider text-charcoal/75 mb-1.5">Bist du dabei? *</label>
+                        <select id="rsvp-status" onchange="handleFormVisibility()" class="w-full px-3.5 py-2.5 rounded-xl border border-sand bg-cream/60 focus:outline-none focus:border-terracotta font-semibold">
+                            <option value="yes">Ja, ich bin dabei!</option>
+                            <option value="no">Leider kann ich nicht dabei sein</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Felder nur bei Zusage -->
+                <div id="rsvp-attending-fields" class="space-y-4 pt-3 border-t border-sand">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                        <!-- Begleitung -->
+                        <div>
+                            <label for="rsvp-partner" class="block text-xs font-bold uppercase tracking-wider text-charcoal/75 mb-1.5">Begleitung / Partner:in</label>
+                            <select id="rsvp-partner" onchange="handleFormVisibility()" class="w-full px-3.5 py-2.5 rounded-xl border border-sand bg-cream/60 focus:outline-none focus:border-terracotta">
+                                <option value="alone">Ich komme alleine (1 Person)</option>
+                                <option value="partner">Mit Partner:in / Begleitung (2 Personen)</option>
+                            </select>
+                        </div>
+
+                        <!-- Name der Begleitung -->
+                        <div id="rsvp-partner-name-wrap" class="hidden">
+                            <label for="rsvp-partner-name" class="block text-xs font-bold uppercase tracking-wider text-charcoal/75 mb-1.5">Name der Begleitung</label>
+                            <input type="text" id="rsvp-partner-name" placeholder="Vor- & Nachname der Begleitung" class="w-full px-3.5 py-2.5 rounded-xl border border-sand bg-cream/60 focus:outline-none focus:border-terracotta">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                        <!-- Schlafplatz-Bedarf -->
+                        <div>
+                            <label for="rsvp-bed-mode" class="block text-xs font-bold uppercase tracking-wider text-charcoal/75 mb-1.5">Schlafplatz-Bedarf (19 DZ vorhanden)</label>
+                            <select id="rsvp-bed-mode" onchange="handleFormVisibility()" class="w-full px-3.5 py-2.5 rounded-xl border border-sand bg-cream/60 focus:outline-none focus:border-terracotta">
+                                <option value="shared_partner">Doppelzimmer gemeinsam mit Begleitung (1,0 DZ)</option>
+                                <option value="single_room">Doppelzimmer allein / eigenes Zimmer (1,0 DZ)</option>
+                                <option value="share_bed">Halbes Doppelzimmer / Bettplatz teilen (0,5 DZ)</option>
+                                <option value="no_bed">Kein Schlafplatz nötig</option>
+                            </select>
+                        </div>
+
+                        <!-- Zeitraum: Anreise & Abreise -->
+                        <div id="rsvp-dates-wrap" class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label for="rsvp-arrival" class="block text-xs font-bold uppercase tracking-wider text-charcoal/75 mb-1.5">Anreise (ab 04.09.)</label>
+                                <input type="date" id="rsvp-arrival" min="2027-09-04" max="2027-09-11" value="2027-09-09" class="w-full px-2.5 py-2.5 rounded-xl border border-sand bg-cream/60 focus:outline-none focus:border-terracotta text-xs sm:text-sm">
+                            </div>
+                            <div>
+                                <label for="rsvp-departure" class="block text-xs font-bold uppercase tracking-wider text-charcoal/75 mb-1.5">Abreise (bis 12.09.)</label>
+                                <input type="date" id="rsvp-departure" min="2027-09-05" max="2027-09-12" value="2027-09-12" class="w-full px-2.5 py-2.5 rounded-xl border border-sand bg-cream/60 focus:outline-none focus:border-terracotta text-xs sm:text-sm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nachricht / Notiz -->
+                <div class="text-sm">
+                    <label for="rsvp-note" class="block text-xs font-bold uppercase tracking-wider text-charcoal/75 mb-1.5">Nachricht / Zimmerwunsch / Notiz (optional)</label>
+                    <input type="text" id="rsvp-note" placeholder="z.B. Zimmer teilen mit ..., Vegetarisch, Allergien, Vorfreude" class="w-full px-3.5 py-2.5 rounded-xl border border-sand bg-cream/60 focus:outline-none focus:border-terracotta">
+                </div>
+
+                <!-- Absenden & Kopieren -->
+                <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
+                    <button type="submit" id="rsvp-submit-btn" class="w-full sm:flex-1 px-6 py-3 rounded-xl bg-terracotta hover:bg-terracotta/90 text-white font-semibold text-sm sm:text-base transition shadow-md cursor-pointer">
+                        Rückmeldung an Charlotte senden
+                    </button>
+                    <button type="button" onclick="copyRsvpSummary()" class="w-full sm:w-auto px-4 py-3 rounded-xl bg-sand hover:bg-charcoal hover:text-white text-charcoal text-xs sm:text-sm font-medium transition cursor-pointer">
+                        Als Text kopieren
+                    </button>
+                </div>
+
+                <!-- Status- & Duplikat-Meldungen -->
+                <div id="rsvp-error-banner" class="hidden rounded-xl bg-terracotta/15 border border-terracotta/40 p-4 text-sm text-terracotta font-medium"></div>
+                <div id="copy-feedback" class="hidden text-xs font-semibold text-sage text-center">
+                    Rückmelde-Text wurde in die Zwischenablage kopiert!
+                </div>
+            </form>
+
+            <!-- Persönlicher Abschluss von Charlotte -->
+            <div class="text-center mt-8 pt-6 border-t border-gold/25 space-y-2">
+                <p class="font-serif italic text-xl sm:text-2xl text-charcoal">
+                    „Ich freue mich riesig darauf, diesen großen Meilenstein 2027 gemeinsam mit euch zu feiern!“
+                </p>
+                <p class="font-hand text-3xl sm:text-4xl text-terracotta font-bold">
+                    Eure Charlotte
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================================================================== -->
+    <!-- PIN-GESCHÜTZTES ORGA-, BELEGUNGSPLAN- & KOSTEN-DASHBOARD              -->
+    <!-- ===================================================================== -->
+    <div id="admin-modal" class="no-print fixed inset-0 z-50 bg-charcoal/75 backdrop-blur-sm hidden items-center justify-center p-3 sm:p-6">
+        <div class="bg-cream rounded-3xl max-w-6xl w-full p-5 sm:p-8 shadow-2xl border border-gold/40 relative max-h-[92vh] overflow-y-auto">
+            <button type="button" onclick="toggleAdminModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-sand hover:bg-terracotta hover:text-white flex items-center justify-center transition cursor-pointer font-bold">
+                ✕
+            </button>
+
+            <div class="mb-6 pr-10">
+                <span class="text-xs font-bold uppercase tracking-wider text-gold">Gastgeber-Dashboard • Gutshaus Groß Markow 2027</span>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-charcoal">Orga, Zimmerauslastung (19 DZ) &amp; Kostenkalkulation</h3>
+            </div>
+
+            <!-- PIN-Sperre -->
+            <div id="admin-pin-gate" class="bg-white rounded-2xl p-6 border border-sand max-w-md mx-auto my-8 text-center space-y-4">
+                <p class="text-sm text-charcoal/80">
+                    Bitte gib die Gastgeber-PIN ein, um den Belegungsplan, die Kostenkalkulation und die Gästeliste zu öffnen:
+                </p>
+                <div class="flex gap-2 justify-center">
+                    <input type="password" id="admin-pin-input" placeholder="PIN eingeben" onkeydown="if(event.key==='Enter') unlockAdmin()" class="px-4 py-2 rounded-xl border border-sand bg-cream text-center font-mono text-base w-40 focus:outline-none focus:border-terracotta">
+                    <button type="button" onclick="unlockAdmin()" class="px-5 py-2 rounded-xl bg-charcoal hover:bg-terracotta text-white text-sm font-semibold transition cursor-pointer">
+                        Entsperren
+                    </button>
+                </div>
+                <p id="admin-pin-error" class="text-xs text-terracotta hidden">Falsche PIN. Bitte erneut versuchen.</p>
+            </div>
+
+            <!-- Entsperrter Dashboard-Inhalt -->
+            <div id="admin-content" class="hidden space-y-6">
+
+                <!-- 1. Kennzahlen-Karten -->
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
+                    <div class="bg-white rounded-2xl p-4 border border-sand">
+                        <span class="block text-[11px] font-bold uppercase text-sage">Zusagen (Pers.)</span>
+                        <span id="kpi-yes-people" class="font-serif text-2xl font-bold text-charcoal">0</span>
+                    </div>
+                    <div class="bg-white rounded-2xl p-4 border border-sand">
+                        <span class="block text-[11px] font-bold uppercase text-terracotta">Absagen (Pers.)</span>
+                        <span id="kpi-no-people" class="font-serif text-2xl font-bold text-charcoal">0</span>
+                    </div>
+                    <div class="bg-white rounded-2xl p-4 border border-sand">
+                        <span class="block text-[11px] font-bold uppercase text-charcoal/70">Hauptnacht (10.09.)</span>
+                        <span id="kpi-party-night-rooms" class="font-serif text-2xl font-bold text-charcoal">0 / 19 DZ</span>
+                    </div>
+                    <div class="bg-white rounded-2xl p-4 border border-sand">
+                        <span class="block text-[11px] font-bold uppercase text-gold">Spitzenbelegung</span>
+                        <span id="kpi-peak-rooms" class="font-serif text-2xl font-bold text-charcoal">0 / 19 DZ</span>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1 bg-white rounded-2xl p-4 border border-sand">
+                        <span class="block text-[11px] font-bold uppercase text-charcoal/70">Angemeldete ZN</span>
+                        <span id="kpi-total-room-nights" class="font-serif text-2xl font-bold text-charcoal">0 ZN</span>
+                    </div>
+                </div>
+
+                <!-- 2. Orga-Einstellungen & Aktionen -->
+                <div class="bg-white rounded-2xl p-4 sm:p-5 border border-sand flex flex-wrap items-center justify-between gap-4">
+                    <div class="flex flex-wrap items-center gap-3 text-sm">
+                        <label for="admin-invited-input" class="font-semibold text-charcoal">Eingeladene Personen gesamt:</label>
+                        <input type="number" id="admin-invited-input" min="1" max="300" value="38" oninput="recalculateAll()" class="w-20 px-3 py-1.5 rounded-xl border border-sand bg-cream font-bold text-center">
+                        <button type="button" id="save-orga-btn" onclick="saveOrgaConfigToCloud()" class="px-4 py-1.5 rounded-xl bg-sage hover:bg-sage/90 text-white text-xs sm:text-sm font-semibold transition cursor-pointer">
+                            Einstellungen &amp; Kosten in Cloud speichern
+                        </button>
+                        <span id="orga-save-feedback" class="hidden text-xs font-semibold text-sage">✓ Gespeichert!</span>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-2">
+                        <button type="button" onclick="resetLocalDeviceLock()" class="px-3.5 py-2 rounded-xl bg-sand hover:bg-charcoal hover:text-white text-charcoal text-xs font-medium transition cursor-pointer" title="Falls du auf diesem Gerät weitere Gäste testen möchtest">
+                            Eigene Gerätesperre entsperren
+                        </button>
+                        <button type="button" onclick="exportRsvpsToCsv()" class="px-4 py-2 rounded-xl bg-charcoal hover:bg-terracotta text-white text-xs sm:text-sm font-semibold transition flex items-center gap-2 cursor-pointer">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            <span>Excel-CSV exportieren</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3. Kosten- & Zimmernacht-Kalkulation (Grundmiete 2.860,00 € + Nebenkosten) -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border border-gold/40 shadow-sm space-y-5">
+                    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sand pb-3">
+                        <div>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-terracotta">Verrechnung für 8 Tage (04.09.–12.09.2027)</span>
+                            <h4 class="font-serif text-xl sm:text-2xl font-bold text-charcoal">Kostenkalkulation &amp; Preis pro Zimmernacht</h4>
+                        </div>
+                        <button type="button" onclick="resetCostDefaults()" class="text-xs px-3 py-1.5 rounded-lg bg-sand hover:bg-charcoal hover:text-white text-charcoal font-medium transition cursor-pointer">
+                            Richtwerte zurücksetzen
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 text-xs sm:text-sm">
+                        <!-- Grundmiete -->
+                        <div class="bg-cream/80 rounded-xl p-3.5 border border-sand">
+                            <label class="block text-[11px] font-bold uppercase text-charcoal/70 mb-1">Grundmietpreis</label>
+                            <div class="flex items-center gap-1">
+                                <input type="number" id="cost-rent" step="10" value="2860" oninput="recalculateAll()" class="w-full px-2.5 py-1.5 rounded-lg border border-sand bg-white font-bold text-charcoal">
+                                <span class="font-bold text-charcoal/70">€</span>
+                            </div>
+                            <span class="block text-[11px] text-charcoal/60 mt-1.5">Fixpreis: 2.860,00 €</span>
+                        </div>
+
+                        <!-- Strom -->
+                        <div class="bg-cream/80 rounded-xl p-3.5 border border-sand">
+                            <div class="flex justify-between items-center mb-1">
+                                <label class="text-[11px] font-bold uppercase text-charcoal/70">Strom (8 Tage)</label>
+                                <span id="cost-power-total" class="font-bold text-terracotta">218,40 €</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-1.5">
+                                <div>
+                                    <span class="block text-[10px] text-charcoal/60">kWh</span>
+                                    <input type="number" id="cost-power-kwh" step="10" value="520" oninput="recalculateAll()" class="w-full px-2 py-1 rounded-lg border border-sand bg-white font-semibold">
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] text-charcoal/60">€/kWh</span>
+                                    <input type="number" id="cost-power-rate" step="0.01" value="0.42" oninput="recalculateAll()" class="w-full px-2 py-1 rounded-lg border border-sand bg-white font-semibold">
+                                </div>
+                            </div>
+                            <span class="block text-[10px] text-charcoal/60 mt-1">Inkl. Indoor-Pool &amp; Saunen</span>
+                        </div>
+
+                        <!-- Heizöl -->
+                        <div class="bg-cream/80 rounded-xl p-3.5 border border-sand">
+                            <div class="flex justify-between items-center mb-1">
+                                <label class="text-[11px] font-bold uppercase text-charcoal/70">Heizöl (8 Tage)</label>
+                                <span id="cost-oil-total" class="font-bold text-terracotta">322,00 €</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-1.5">
+                                <div>
+                                    <span class="block text-[10px] text-charcoal/60">Liter</span>
+                                    <input type="number" id="cost-oil-liters" step="10" value="280" oninput="recalculateAll()" class="w-full px-2 py-1 rounded-lg border border-sand bg-white font-semibold">
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] text-charcoal/60">€/Liter</span>
+                                    <input type="number" id="cost-oil-rate" step="0.01" value="1.15" oninput="recalculateAll()" class="w-full px-2 py-1 rounded-lg border border-sand bg-white font-semibold">
+                                </div>
+                            </div>
+                            <span class="block text-[10px] text-charcoal/60 mt-1">Warmwasser &amp; Heizung</span>
+                        </div>
+
+                        <!-- Wasser -->
+                        <div class="bg-cream/80 rounded-xl p-3.5 border border-sand">
+                            <div class="flex justify-between items-center mb-1">
+                                <label class="text-[11px] font-bold uppercase text-charcoal/70">Wasser (8 Tage)</label>
+                                <span id="cost-water-total" class="font-bold text-terracotta">154,00 €</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-1.5">
+                                <div>
+                                    <span class="block text-[10px] text-charcoal/60">m³</span>
+                                    <input type="number" id="cost-water-m3" step="1" value="28" oninput="recalculateAll()" class="w-full px-2 py-1 rounded-lg border border-sand bg-white font-semibold">
+                                </div>
+                                <div>
+                                    <span class="block text-[10px] text-charcoal/60">€/m³</span>
+                                    <input type="number" id="cost-water-rate" step="0.10" value="5.50" oninput="recalculateAll()" class="w-full px-2 py-1 rounded-lg border border-sand bg-white font-semibold">
+                                </div>
+                            </div>
+                            <span class="block text-[10px] text-charcoal/60 mt-1">Frisch- &amp; Abwasser</span>
+                        </div>
+
+                        <!-- Endreinigung / Sonstiges -->
+                        <div class="bg-cream/80 rounded-xl p-3.5 border border-sand">
+                            <label class="block text-[11px] font-bold uppercase text-charcoal/70 mb-1">Endreinigung / Sonst.</label>
+                            <div class="flex items-center gap-1">
+                                <input type="number" id="cost-extra" step="10" value="0" oninput="recalculateAll()" class="w-full px-2.5 py-1.5 rounded-lg border border-sand bg-white font-bold text-charcoal">
+                                <span class="font-bold text-charcoal/70">€</span>
+                            </div>
+                            <span class="block text-[10px] text-charcoal/60 mt-1.5">Optionaler Puffer / Reinigung</span>
+                        </div>
+                    </div>
+
+                    <!-- Ergebnis-Kacheln -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                        <div class="rounded-2xl p-4 bg-charcoal text-cream flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-gold font-semibold">Gesamtkosten (Miete + NK)</span>
+                                <div id="calc-grand-total" class="font-serif text-3xl font-bold mt-1">3.554,40 €</div>
+                            </div>
+                            <p class="text-xs text-cream/75 mt-2">
+                                Grundmiete <span id="calc-rent-display">2.860,00 €</span> + Nebenkosten <span id="calc-nk-display">694,40 €</span>
+                            </p>
+                        </div>
+
+                        <div class="rounded-2xl p-4 bg-sageLight/85 border border-sage/30 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2">
+                                    <span class="text-xs uppercase tracking-wider text-sage font-bold">Ist-Stand (Angemeldet)</span>
+                                    <span id="calc-actual-room-nights" class="text-xs font-bold px-2 py-0.5 rounded-full bg-sage text-white">0 ZN</span>
+                                </div>
+                                <div id="calc-actual-rate" class="font-serif text-3xl font-bold text-charcoal mt-1">– € <span class="text-sm font-sans font-normal text-charcoal/70">/ Zimmer &amp; Nacht</span></div>
+                            </div>
+                            <p class="text-xs text-charcoal/80 mt-2">
+                                Pro Person bei Doppelbelegung: <strong id="calc-actual-person-rate">– €</strong> / Nacht
+                            </p>
+                        </div>
+
+                        <div class="rounded-2xl p-4 bg-terracotta/10 border border-terracotta/30 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2">
+                                    <span class="text-xs uppercase tracking-wider text-terracotta font-bold">Ziel-Szenario</span>
+                                    <div class="flex items-center gap-1 text-xs">
+                                        <input type="number" id="calc-target-nights" min="1" max="152" value="60" oninput="recalculateAll()" class="w-16 px-2 py-0.5 rounded-lg border border-terracotta/40 bg-white font-bold text-center text-charcoal">
+                                        <span class="font-semibold text-charcoal/80">ZN</span>
+                                    </div>
+                                </div>
+                                <div id="calc-target-rate" class="font-serif text-3xl font-bold text-charcoal mt-1">59,24 € <span class="text-sm font-sans font-normal text-charcoal/70">/ Zimmer &amp; Nacht</span></div>
+                            </div>
+                            <p class="text-xs text-charcoal/80 mt-2">
+                                Pro Person bei Doppelbelegung: <strong id="calc-target-person-rate">29,62 €</strong> / Nacht (max. 152 ZN)
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Umschalter Verrechnungsbasis -->
+                    <div class="bg-cream rounded-xl p-3 border border-sand flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm">
+                        <span class="font-semibold text-charcoal">Verrechnungsbasis für die Gästeliste &amp; CSV:</span>
+                        <div class="flex flex-wrap gap-2">
+                            <label class="inline-flex items-center gap-1.5 cursor-pointer bg-white px-3 py-1.5 rounded-lg border border-sand">
+                                <input type="radio" name="billing-basis" value="actual" checked onchange="recalculateAll()" class="accent-terracotta">
+                                <span>Aktuelle Rückmeldungen (Ist-Zimmernächte)</span>
+                            </label>
+                            <label class="inline-flex items-center gap-1.5 cursor-pointer bg-white px-3 py-1.5 rounded-lg border border-sand">
+                                <input type="radio" name="billing-basis" value="target" onchange="recalculateAll()" class="accent-terracotta">
+                                <span>Ziel-Szenario (<span id="billing-basis-target-label">60</span> Zimmernächte)</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Tagesgenaue Zimmerauslastung (04.09. – 12.09.2027) -->
+                <div class="bg-white rounded-2xl p-5 border border-sand space-y-4">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <h4 class="font-serif text-lg font-bold text-charcoal">Tagesgenaue Zimmerauslastung (Nächte 04.09. – 12.09.2027)</h4>
+                        <span class="text-xs text-charcoal/70">Kapazität: Bel Etage (5 DZ) • Obergeschoss (11 DZ) • Dachgeschoss (3 DZ) = <strong>19 DZ</strong></span>
+                    </div>
+                    <div id="admin-daily-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+                        <!-- Dynamisch gefüllt -->
+                    </div>
+                </div>
+
+                <!-- 5. Vollständige Gästeliste -->
+                <div class="bg-white rounded-2xl border border-sand overflow-hidden">
+                    <div class="p-4 border-b border-sand flex items-center justify-between">
+                        <h4 class="font-serif text-lg font-bold text-charcoal">Alle Rückmeldungen (<span id="admin-table-count">0</span>)</h4>
+                        <span class="text-xs text-charcoal/65">Echtzeit-Liste aus Firestore</span>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                            <thead>
+                                <tr class="bg-sand/70 text-charcoal/80 uppercase text-[11px] tracking-wider">
+                                    <th class="p-3">Name &amp; Begleitung</th>
+                                    <th class="p-3">Status</th>
+                                    <th class="p-3">Pers.</th>
+                                    <th class="p-3">Zimmeranteil</th>
+                                    <th class="p-3">Zeitraum &amp; Nächte</th>
+                                    <th class="p-3">Zimmernächte</th>
+                                    <th class="p-3">Kostenbeitrag</th>
+                                    <th class="p-3">Notiz</th>
+                                    <th class="p-3 text-right">Aktion</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-rsvp-tbody" class="divide-y divide-sand">
+                                <tr><td colspan="9" class="p-6 text-center text-charcoal/60">Lade Rückmeldungen...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 6. Optionaler lokaler Foto-Test für den Gastgeber -->
+                <details class="bg-white rounded-2xl p-4 border border-sand text-xs sm:text-sm">
+                    <summary class="font-semibold text-charcoal cursor-pointer">Lokale Kinderfotos (foto1.jpg – foto4.jpg) ohne Webserver testen</summary>
+                    <p class="text-xs text-charcoal/70 mt-2 mb-3">
+                        Im Live-Betrieb werden automatisch <code>foto1.jpg</code> bis <code>foto4.jpg</code> aus demselben Ordner geladen. Für lokale Tests ohne Server kannst du hier Bilder auswählen:
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase text-terracotta mb-1">foto1.jpg (Tretauto)</label>
+                            <input type="file" accept="image/*" onchange="handleLocalPhotoUpload(1, this)" class="text-xs w-full">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase text-gold mb-1">foto3.jpg (Großes Glas)</label>
+                            <input type="file" accept="image/*" onchange="handleLocalPhotoUpload(3, this)" class="text-xs w-full">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase text-sage mb-1">foto2.jpg (Kuscheltier)</label>
+                            <input type="file" accept="image/*" onchange="handleLocalPhotoUpload(2, this)" class="text-xs w-full">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase text-charcoal mb-1">foto4.jpg (Stuhl)</label>
+                            <input type="file" accept="image/*" onchange="handleLocalPhotoUpload(4, this)" class="text-xs w-full">
+                        </div>
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- HILFSFUNKTIONEN FÜR BILD-FALLBACKS (VOR DEM MODUL-SCRIPT VERFÜGBAR)   -->
+    <!-- ===================================================================== -->
+    <script>
+        function handleImgFallback(imgEl, slot) {
+            if (imgEl.dataset.fallbackApplied === 'true') return;
+            imgEl.dataset.fallbackApplied = 'true';
+
+            const labels = {
+                1: { title: 'foto1.jpg', sub: 'Tretauto • Vollgas!', bg: '#E3EAD9', accent: '#C26D4F' },
+                2: { title: 'foto2.jpg', sub: 'Kuscheltier • Dancefloor!', bg: '#E6DDD0', accent: '#4A5D4E' },
+                3: { title: 'foto3.jpg', sub: 'Großes Glas • Prost!', bg: '#EAE3D5', accent: '#B8924A' },
+                4: { title: 'foto4.jpg', sub: 'Stuhl • Müde & glücklich', bg: '#DCE4D6', accent: '#262926' }
+            };
+            const info = labels[slot] || labels[1];
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+                <rect width="400" height="300" fill="${info.bg}"/>
+                <rect x="24" y="24" width="352" height="252" rx="14" fill="none" stroke="${info.accent}" stroke-width="2" stroke-dasharray="8 6" opacity="0.55"/>
+                <text x="200" y="138" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#262926">${info.title}</text>
+                <text x="200" y="168" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#4A5D4E">${info.sub}</text>
+            </svg>`;
+            imgEl.src = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+        }
+    </script>
+
+    <!-- ===================================================================== -->
+    <!-- HAUPT-JAVASCRIPT & FIREBASE MODULAR SDK (v10.14.1)                    -->
+    <!-- ===================================================================== -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+        import {
+            getFirestore,
+            collection,
+            doc,
+            addDoc,
+            setDoc,
+            deleteDoc,
+            onSnapshot,
+            serverTimestamp
+        } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+
+        // =========================================================================
+        // ZENTRALE KONFIGURATION
+        // =========================================================================
+        const ORGA_CONFIG = {
+            adminPin: "2027",                          // Gastgeber-PIN für das Dashboard
+            totalRooms: 19,                            // 19 Doppelschlafzimmer im Gutshaus Groß Markow
+            rsvpCollection: "rsvps_charlotte_30",      // Firestore Collection für alle Rückmeldungen
+            orgaCollection: "orga_charlotte_30",       // Firestore Collection für Orga-Einstellungen
+            orgaDocId: "settings_config",              // Dokument-ID für Einstellungen & Kostenparameter
+            storageKey: "charlotte30_rsvp_submitted"   // Browser-Duplikatschutz
+        };
+
+        // Exakte Firebase-Konfiguration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBE9OmNlVsy5F3AL18NWax_6nu1IArvi7M",
+            authDomain: "geburtstag-2027-8fdd8.firebaseapp.com",
+            projectId: "geburtstag-2027-8fdd8",
+            storageBucket: "geburtstag-2027-8fdd8.firebasestorage.app",
+            messagingSenderId: "448965252832",
+            appId: "1:448965252832:web:23b8f63b47e642e53fe285",
+            measurementId: "G-P8HMQ0XGPP"
+        };
+
+        // =========================================================================
+        // FIREBASE INITIALISIERUNG & ECHTZEIT-LISTENER
+        // =========================================================================
+        let db = null;
+        let rsvpList = [];
+        let totalInvitedGuests = 38;
+
+        function setLiveStatusUI(state, text) {
+            const syncBadge = document.getElementById('live-sync-badge');
+            const statusDot = document.getElementById('firebase-dot');
+            const pingRing = document.getElementById('live-ping-ring');
+            const pingDot = document.getElementById('live-ping-dot');
+
+            syncBadge.textContent = text;
+            if (state === 'connected') {
+                syncBadge.className = "text-xs font-semibold px-3 py-1 rounded-full bg-sageLight text-sage";
+                statusDot.className = "inline-block w-2.5 h-2.5 rounded-full bg-emerald-400";
+                pingRing.className = "animate-ping absolute inline-flex h-full w-full rounded-full bg-sage opacity-75";
+                pingDot.className = "relative inline-flex rounded-full h-3 w-3 bg-sage";
+            } else if (state === 'error') {
+                syncBadge.className = "text-xs font-semibold px-3 py-1 rounded-full bg-terracotta/15 text-terracotta";
+                statusDot.className = "inline-block w-2.5 h-2.5 rounded-full bg-terracotta";
+                pingRing.className = "hidden";
+                pingDot.className = "relative inline-flex rounded-full h-3 w-3 bg-terracotta";
+            } else {
+                syncBadge.className = "text-xs font-medium px-3 py-1 rounded-full bg-gold/15 text-charcoal";
+                statusDot.className = "inline-block w-2.5 h-2.5 rounded-full bg-gold animate-pulse";
+            }
+        }
+
+        function initFirebase() {
+            try {
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+
+                // 1. Echtzeit-Listener für alle Rückmeldungen
+                const rsvpColRef = collection(db, ORGA_CONFIG.rsvpCollection);
+                onSnapshot(rsvpColRef, (snapshot) => {
+                    const loaded = [];
+                    snapshot.forEach((docSnap) => {
+                        loaded.push({ id: docSnap.id, ...docSnap.data() });
+                    });
+                    loaded.sort((a, b) => (b.createdAtMs || 0) - (a.createdAtMs || 0));
+                    rsvpList = loaded;
+
+                    setLiveStatusUI('connected', 'Live-Datenbank aktiv');
+                    recalculateAll();
+                }, (error) => {
+                    console.error("Firestore RSVP-Lesefehler:", error);
+                    setLiveStatusUI('error', 'Firestore-Regeln prüfen');
+                    recalculateAll();
+                });
+
+                // 2. Echtzeit-Listener für Orga- & Kosten-Einstellungen
+                const orgaDocRef = doc(db, ORGA_CONFIG.orgaCollection, ORGA_CONFIG.orgaDocId);
+                onSnapshot(orgaDocRef, (docSnap) => {
+                    if (docSnap.exists()) {
+                        const cfg = docSnap.data();
+                        if (cfg.totalInvited !== undefined) {
+                            totalInvitedGuests = Number(cfg.totalInvited) || 38;
+                            document.getElementById('admin-invited-input').value = totalInvitedGuests;
+                        }
+                        if (cfg.costRent !== undefined) document.getElementById('cost-rent').value = cfg.costRent;
+                        if (cfg.costPowerKwh !== undefined) document.getElementById('cost-power-kwh').value = cfg.costPowerKwh;
+                        if (cfg.costPowerRate !== undefined) document.getElementById('cost-power-rate').value = cfg.costPowerRate;
+                        if (cfg.costOilLiters !== undefined) document.getElementById('cost-oil-liters').value = cfg.costOilLiters;
+                        if (cfg.costOilRate !== undefined) document.getElementById('cost-oil-rate').value = cfg.costOilRate;
+                        if (cfg.costWaterM3 !== undefined) document.getElementById('cost-water-m3').value = cfg.costWaterM3;
+                        if (cfg.costWaterRate !== undefined) document.getElementById('cost-water-rate').value = cfg.costWaterRate;
+                        if (cfg.costExtra !== undefined) document.getElementById('cost-extra').value = cfg.costExtra;
+                        if (cfg.targetRoomNights !== undefined) document.getElementById('calc-target-nights').value = cfg.targetRoomNights;
+
+                        recalculateAll();
+                    }
+                }, (error) => {
+                    console.warn("Orga-Config Listener Hinweis:", error.message);
+                });
+
+            } catch (err) {
+                console.error("Firebase Initialisierungsfehler:", err);
+                setLiveStatusUI('error', 'Verbindungsfehler');
+                recalculateAll();
+            }
+        }
+
+        // =========================================================================
+        // DUPLIKATSCHUTZ (BROWSER-SPERRE + FIRESTORE-NAMENSABGLEICH)
+        // =========================================================================
+        function normalizeName(str) {
+            return String(str || '')
+                .toLowerCase()
+                .trim()
+                .replace(/\s+/g, ' ');
+        }
+
+        function checkDuplicateInDatabase(mainName, partnerName) {
+            const normMain = normalizeName(mainName);
+            const normPartner = normalizeName(partnerName);
+
+            for (const entry of rsvpList) {
+                const existingMain = normalizeName(entry.name);
+                const existingPartner = normalizeName(entry.partnerName);
+
+                if (normMain && (existingMain === normMain || (existingPartner && existingPartner === normMain))) {
+                    return `Für „${mainName.trim()}“ liegt bereits eine Rückmeldung vor. Jede Person kann sich nur einmal anmelden.`;
+                }
+                if (normPartner && (existingMain === normPartner || (existingPartner && existingPartner === normPartner))) {
+                    return `Für die Begleitung „${partnerName.trim()}“ liegt bereits eine eigene Rückmeldung vor.`;
+                }
+            }
+            return null;
+        }
+
+        function checkLocalSubmittedState() {
+            try {
+                const raw = localStorage.getItem(ORGA_CONFIG.storageKey);
+                if (!raw) return;
+                const saved = JSON.parse(raw);
+                if (saved && saved.name) {
+                    showAlreadySubmittedCard(saved);
+                }
+            } catch (e) { /* ignore */ }
+        }
+
+        function showAlreadySubmittedCard(data) {
+            const formEl = document.getElementById('rsvp-form');
+            const cardEl = document.getElementById('rsvp-already-submitted-card');
+            const titleEl = document.getElementById('submitted-card-title');
+            const detailsEl = document.getElementById('submitted-card-details');
+
+            formEl.classList.add('hidden');
+            cardEl.classList.remove('hidden');
+
+            titleEl.textContent = `Vielen Dank, ${data.name}!`;
+
+            let html = `<p><strong>Status:</strong> ${data.status === 'yes' ? 'Zusage – Ich bin dabei!' : 'Leider abgesagt'}</p>`;
+            if (data.status === 'yes') {
+                html += `<p><strong>Personen:</strong> ${data.guestCount === 2 ? `2 Personen (mit ${escapeHtml(data.partnerName || 'Begleitung')})` : '1 Person'}</p>`;
+                if (data.needsBed === 'yes') {
+                    const roomLabel = data.roomPref === 'share_room'
+                        ? 'Halbes Doppelzimmer / Bettplatz (0,5 DZ)'
+                        : 'Doppelzimmer (1,0 DZ)';
+                    html += `<p><strong>Schlafplatz:</strong> ${roomLabel}</p>`;
+                    html += `<p><strong>Zeitraum:</strong> ${formatDateShort(data.arrival)}2027 bis ${formatDateShort(data.departure)}2027</p>`;
+                } else {
+                    html += `<p><strong>Schlafplatz:</strong> Kein Schlafplatz nötig</p>`;
+                }
+            }
+            if (data.note) {
+                html += `<p><strong>Nachricht:</strong> ${escapeHtml(data.note)}</p>`;
+            }
+            detailsEl.innerHTML = html;
+        }
+
+        window.resetLocalDeviceLock = function() {
+            try {
+                localStorage.removeItem(ORGA_CONFIG.storageKey);
+            } catch (e) { /* ignore */ }
+            document.getElementById('rsvp-already-submitted-card').classList.add('hidden');
+            document.getElementById('rsvp-form').classList.remove('hidden');
+            document.getElementById('rsvp-form').reset();
+            handleFormVisibility();
+        };
+
+        // =========================================================================
+        // HELFER FÜR DATUM, WÄHRUNG, ZIMMERNÄCHTE & KOSTEN
+        // =========================================================================
+        function formatDateShort(iso) {
+            if (!iso) return '-';
+            const p = iso.split('-');
+            return p.length === 3 ? `${p[2]}.${p[1]}.` : iso;
+        }
+
+        function formatEuro(val) {
+            if (!isFinite(val) || isNaN(val)) return '– €';
+            return val.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+        }
+
+        function calculateNights(arrivalIso, departureIso) {
+            if (!arrivalIso || !departureIso) return 0;
+            const start = new Date(arrivalIso + 'T12:00:00');
+            const end = new Date(departureIso + 'T12:00:00');
+            const diff = Math.round((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+            return Math.max(0, diff);
+        }
+
+        function calculateRoomShare(entry) {
+            if (entry.status !== 'yes' || entry.needsBed !== 'yes') return 0;
+            if (entry.roomPref === 'share_room' && Number(entry.guestCount) === 1) {
+                return 0.5;
+            }
+            return 1.0;
+        }
+
+        function getCostBreakdown() {
+            const rent = Math.max(0, Number(document.getElementById('cost-rent')?.value) || 0);
+            const powerKwh = Math.max(0, Number(document.getElementById('cost-power-kwh')?.value) || 0);
+            const powerRate = Math.max(0, Number(document.getElementById('cost-power-rate')?.value) || 0);
+            const oilLiters = Math.max(0, Number(document.getElementById('cost-oil-liters')?.value) || 0);
+            const oilRate = Math.max(0, Number(document.getElementById('cost-oil-rate')?.value) || 0);
+            const waterM3 = Math.max(0, Number(document.getElementById('cost-water-m3')?.value) || 0);
+            const waterRate = Math.max(0, Number(document.getElementById('cost-water-rate')?.value) || 0);
+            const extra = Math.max(0, Number(document.getElementById('cost-extra')?.value) || 0);
+
+            const powerTotal = powerKwh * powerRate;
+            const oilTotal = oilLiters * oilRate;
+            const waterTotal = waterM3 * waterRate;
+            const utilitiesTotal = powerTotal + oilTotal + waterTotal + extra;
+            const grandTotal = rent + utilitiesTotal;
+
+            return { rent, powerTotal, oilTotal, waterTotal, utilitiesTotal, grandTotal };
+        }
+
+        // =========================================================================
+        // GESAMTBERECHNUNG: LIVE-STATUS, NÄCHTE-AUSLASTUNG & KOSTEN
+        // =========================================================================
+        window.recalculateAll = function() {
+            const invitedInput = document.getElementById('admin-invited-input');
+            if (invitedInput && Number(invitedInput.value) > 0) {
+                totalInvitedGuests = Number(invitedInput.value);
+            }
+
+            let yesPeople = 0;
+            let noPeople = 0;
+            let totalRoomNights = 0;
+
+            const nightSlots = [
+                { date: '2027-09-04', label: '04.–05.09. (Sa–So)', rawRooms: 0 },
+                { date: '2027-09-05', label: '05.–06.09. (So–Mo)', rawRooms: 0 },
+                { date: '2027-09-06', label: '06.–07.09. (Mo–Di)', rawRooms: 0 },
+                { date: '2027-09-07', label: '07.–08.09. (Di–Mi)', rawRooms: 0 },
+                { date: '2027-09-08', label: '08.–09.09. (Mi–Do)', rawRooms: 0 },
+                { date: '2027-09-09', label: '09.–10.09. (Do–Fr)', rawRooms: 0 },
+                { date: '2027-09-10', label: '10.–11.09. (Fr Party)', rawRooms: 0 },
+                { date: '2027-09-11', label: '11.–12.09. (Sa–So)', rawRooms: 0 }
+            ];
+
+            rsvpList.forEach(item => {
+                const count = Number(item.guestCount) || 1;
+                if (item.status === 'yes') {
+                    yesPeople += count;
+                    const share = calculateRoomShare(item);
+                    const nights = calculateNights(item.arrival, item.departure);
+                    totalRoomNights += share * nights;
+
+                    if (share > 0 && item.arrival && item.departure) {
+                        nightSlots.forEach(slot => {
+                            if (item.arrival <= slot.date && item.departure > slot.date) {
+                                slot.rawRooms += share;
+                            }
+                        });
+                    }
+                } else {
+                    noPeople += count;
+                }
+            });
+
+            let peakRooms = 0;
+            let partyNightRooms = 0;
+            nightSlots.forEach(slot => {
+                const ceiled = Math.ceil(slot.rawRooms);
+                if (ceiled > peakRooms) peakRooms = ceiled;
+                if (slot.date === '2027-09-10') partyNightRooms = ceiled;
+            });
+
+            // Öffentliche Live-Status-Box aktualisieren
+            const safeInvited = Math.max(1, totalInvitedGuests);
+            const yesPercent = Math.min(100, Math.round((yesPeople / safeInvited) * 100));
+            const roomPercent = Math.min(100, Math.round((peakRooms / ORGA_CONFIG.totalRooms) * 100));
+            const roomsFree = Math.max(0, ORGA_CONFIG.totalRooms - peakRooms);
+
+            document.getElementById('stat-rsvp-percent').textContent = `${yesPercent} %`;
+            document.getElementById('stat-rsvp-bar').style.width = `${yesPercent}%`;
+            document.getElementById('stat-yes-people').textContent = yesPeople;
+            document.getElementById('stat-responded-people').textContent = yesPeople + noPeople;
+            document.getElementById('stat-invited-total').textContent = safeInvited;
+
+            document.getElementById('stat-rooms-text').textContent = `${peakRooms} / ${ORGA_CONFIG.totalRooms}`;
+            document.getElementById('stat-rooms-bar').style.width = `${roomPercent}%`;
+            document.getElementById('stat-rooms-booked').textContent = peakRooms;
+            document.getElementById('stat-rooms-free').textContent = roomsFree;
+
+            // Admin-KPIs aktualisieren
+            document.getElementById('kpi-yes-people').textContent = yesPeople;
+            document.getElementById('kpi-no-people').textContent = noPeople;
+            document.getElementById('kpi-party-night-rooms').textContent = `${partyNightRooms} / ${ORGA_CONFIG.totalRooms} DZ`;
+            document.getElementById('kpi-peak-rooms').textContent = `${peakRooms} / ${ORGA_CONFIG.totalRooms} DZ`;
+            document.getElementById('kpi-total-room-nights').textContent = `${totalRoomNights.toLocaleString('de-DE', { maximumFractionDigits: 1 })} ZN`;
+
+            // Kostenkalkulation aktualisieren
+            const costs = getCostBreakdown();
+            document.getElementById('cost-power-total').textContent = formatEuro(costs.powerTotal);
+            document.getElementById('cost-oil-total').textContent = formatEuro(costs.oilTotal);
+            document.getElementById('cost-water-total').textContent = formatEuro(costs.waterTotal);
+
+            document.getElementById('calc-grand-total').textContent = formatEuro(costs.grandTotal);
+            document.getElementById('calc-rent-display').textContent = formatEuro(costs.rent);
+            document.getElementById('calc-nk-display').textContent = formatEuro(costs.utilitiesTotal);
+
+            const formattedActualZN = totalRoomNights.toLocaleString('de-DE', { maximumFractionDigits: 1 });
+            document.getElementById('calc-actual-room-nights').textContent = `${formattedActualZN} ZN`;
+
+            const actualRatePerZN = totalRoomNights > 0 ? (costs.grandTotal / totalRoomNights) : 0;
+            document.getElementById('calc-actual-rate').innerHTML = totalRoomNights > 0
+                ? `${formatEuro(actualRatePerZN)} <span class="text-sm font-sans font-normal text-charcoal/70">/ Zimmer &amp; Nacht</span>`
+                : `– € <span class="text-sm font-sans font-normal text-charcoal/70">/ Zimmer &amp; Nacht</span>`;
+            document.getElementById('calc-actual-person-rate').textContent = totalRoomNights > 0
+                ? formatEuro(actualRatePerZN / 2)
+                : '– €';
+
+            const targetNights = Math.max(1, Number(document.getElementById('calc-target-nights')?.value) || 60);
+            document.getElementById('billing-basis-target-label').textContent = targetNights;
+            const targetRatePerZN = costs.grandTotal / targetNights;
+            document.getElementById('calc-target-rate').innerHTML = `${formatEuro(targetRatePerZN)} <span class="text-sm font-sans font-normal text-charcoal/70">/ Zimmer &amp; Nacht</span>`;
+            document.getElementById('calc-target-person-rate').textContent = formatEuro(targetRatePerZN / 2);
+
+            const selectedBasis = document.querySelector('input[name="billing-basis"]:checked')?.value || 'actual';
+            const activeRatePerZN = selectedBasis === 'target' ? targetRatePerZN : actualRatePerZN;
+
+            renderDailyGrid(nightSlots);
+            renderGuestTable(activeRatePerZN);
+        };
+
+        function renderDailyGrid(nightSlots) {
+            const grid = document.getElementById('admin-daily-grid');
+            if (!grid) return;
+
+            grid.innerHTML = nightSlots.map(slot => {
+                const booked = Math.ceil(slot.rawRooms);
+                const pct = Math.min(100, Math.round((booked / ORGA_CONFIG.totalRooms) * 100));
+                const overbooked = booked > ORGA_CONFIG.totalRooms;
+                const isParty = slot.date === '2027-09-10';
+
+                const cardStyle = overbooked
+                    ? 'border-terracotta bg-terracotta/10'
+                    : (isParty ? 'border-gold bg-gold/10' : 'border-sand bg-cream/70');
+                const barColor = overbooked ? 'bg-terracotta' : (isParty ? 'bg-gold' : 'bg-sage');
+
+                return `
+                    <div class="rounded-xl p-3 border ${cardStyle} space-y-1.5">
+                        <div class="flex items-center justify-between">
+                            <span class="font-semibold text-charcoal">${slot.label}</span>
+                            <span class="font-serif font-bold text-sm ${overbooked ? 'text-terracotta' : 'text-charcoal'}">${booked} / ${ORGA_CONFIG.totalRooms}</span>
+                        </div>
+                        <div class="w-full h-2 bg-white rounded-full overflow-hidden border border-sand/60">
+                            <div class="h-full ${barColor} rounded-full transition-all duration-500" style="width: ${pct}%"></div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderGuestTable(ratePerZN) {
+            const tbody = document.getElementById('admin-rsvp-tbody');
+            const countEl = document.getElementById('admin-table-count');
+            if (!tbody) return;
+
+            countEl.textContent = rsvpList.length;
+
+            if (rsvpList.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="9" class="p-6 text-center text-charcoal/60">Noch keine Rückmeldungen eingegangen.</td></tr>`;
+                return;
+            }
+
+            tbody.innerHTML = rsvpList.map(item => {
+                const statusBadge = item.status === 'yes'
+                    ? `<span class="px-2.5 py-0.5 rounded-full bg-sageLight text-sage font-semibold text-xs">Zusage</span>`
+                    : `<span class="px-2.5 py-0.5 rounded-full bg-terracotta/15 text-terracotta font-semibold text-xs">Absage</span>`;
+
+                const partnerLine = item.hasPartner === 'partner'
+                    ? `<span class="block text-xs text-charcoal/70">+ ${escapeHtml(item.partnerName || 'Begleitung')}</span>`
+                    : '';
+
+                const share = calculateRoomShare(item);
+                const nights = item.status === 'yes' && item.needsBed === 'yes'
+                    ? calculateNights(item.arrival, item.departure)
+                    : 0;
+                const roomNights = share * nights;
+                const costContribution = roomNights * ratePerZN;
+
+                let roomCol = '-';
+                if (item.status === 'yes') {
+                    if (item.needsBed === 'yes') {
+                        roomCol = share === 0.5
+                            ? `<span class="font-semibold text-gold">0,5 DZ (Bettplatz)</span>`
+                            : `<span class="font-semibold text-sage">1,0 DZ (Eigenes)</span>`;
+                    } else {
+                        roomCol = `<span class="text-charcoal/60">Kein Bett</span>`;
+                    }
+                }
+
+                const dateCol = item.status === 'yes' && item.needsBed === 'yes'
+                    ? `${formatDateShort(item.arrival)} – ${formatDateShort(item.departure)}2027 <span class="block text-[11px] text-charcoal/60">(${nights} ${nights === 1 ? 'Nacht' : 'Nächte'})</span>`
+                    : (item.status === 'yes' ? 'Tagesgast / ohne Bett' : '-');
+
+                const znCol = roomNights > 0
+                    ? `<span class="font-semibold text-charcoal">${roomNights.toLocaleString('de-DE', { maximumFractionDigits: 1 })} ZN</span>`
+                    : '-';
+
+                const costCol = roomNights > 0 && ratePerZN > 0
+                    ? `<span class="font-bold text-terracotta">${formatEuro(costContribution)}</span>`
+                    : '-';
+
+                return `
+                    <tr class="hover:bg-cream/60 transition">
+                        <td class="p-3 font-medium text-charcoal">${escapeHtml(item.name)}${partnerLine}</td>
+                        <td class="p-3">${statusBadge}</td>
+                        <td class="p-3 font-bold">${item.guestCount || 1}</td>
+                        <td class="p-3 whitespace-nowrap">${roomCol}</td>
+                        <td class="p-3 whitespace-nowrap">${dateCol}</td>
+                        <td class="p-3 whitespace-nowrap">${znCol}</td>
+                        <td class="p-3 whitespace-nowrap">${costCol}</td>
+                        <td class="p-3 text-charcoal/75 max-w-xs">${escapeHtml(item.note || '-')}</td>
+                        <td class="p-3 text-right">
+                            <button type="button" onclick="deleteRsvpEntry('${item.id}')" class="px-2.5 py-1 rounded-lg bg-terracotta/10 hover:bg-terracotta text-terracotta hover:text-white text-xs font-medium transition cursor-pointer">
+                                Löschen
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        // =========================================================================
+        // GÄSTE-FORMULAR: INTERAKTION & FIRESTORE SPEICHERN
+        // =========================================================================
+        window.handleFormVisibility = function() {
+            const status = document.getElementById('rsvp-status').value;
+            const attendingWrap = document.getElementById('rsvp-attending-fields');
+            const partner = document.getElementById('rsvp-partner').value;
+            const partnerNameWrap = document.getElementById('rsvp-partner-name-wrap');
+            const bedModeEl = document.getElementById('rsvp-bed-mode');
+            const datesWrap = document.getElementById('rsvp-dates-wrap');
+
+            attendingWrap.classList.toggle('hidden', status !== 'yes');
+            partnerNameWrap.classList.toggle('hidden', partner !== 'partner');
+
+            // Option "Doppelzimmer gemeinsam mit Begleitung" sinnvoll vorauswählen
+            if (partner === 'partner' && bedModeEl.value === 'single_room') {
+                bedModeEl.value = 'shared_partner';
+            } else if (partner === 'alone' && bedModeEl.value === 'shared_partner') {
+                bedModeEl.value = 'single_room';
+            }
+
+            datesWrap.classList.toggle('hidden', bedModeEl.value === 'no_bed');
+        };
+
+        window.submitRsvpForm = async function(event) {
+            event.preventDefault();
+            const submitBtn = document.getElementById('rsvp-submit-btn');
+            const errorBanner = document.getElementById('rsvp-error-banner');
+            errorBanner.classList.add('hidden');
+
+            // 1. Browser-Sperre prüfen
+            if (localStorage.getItem(ORGA_CONFIG.storageKey)) {
+                checkLocalSubmittedState();
+                return;
+            }
+
+            const name = document.getElementById('rsvp-name').value.trim();
+            if (!name) return;
+
+            const status = document.getElementById('rsvp-status').value;
+            const hasPartner = document.getElementById('rsvp-partner').value;
+            const partnerName = document.getElementById('rsvp-partner-name').value.trim();
+            const guestCount = status === 'yes' ? (hasPartner === 'partner' ? 2 : 1) : 1;
+
+            const bedMode = status === 'yes' ? document.getElementById('rsvp-bed-mode').value : 'no_bed';
+            const needsBed = bedMode === 'no_bed' ? 'no' : 'yes';
+            const roomPref = bedMode === 'share_bed' ? 'share_room' : (needsBed === 'yes' ? '1_room' : 'none');
+
+            const arrival = needsBed === 'yes' ? document.getElementById('rsvp-arrival').value : '';
+            const departure = needsBed === 'yes' ? document.getElementById('rsvp-departure').value : '';
+            const note = document.getElementById('rsvp-note').value.trim();
+
+            if (needsBed === 'yes' && arrival && departure && departure <= arrival) {
+                errorBanner.textContent = "Bitte wähle ein Abreisedatum nach deinem Anreisedatum (mindestens 1 Übernachtung).";
+                errorBanner.classList.remove('hidden');
+                return;
+            }
+
+            // 2. Datenbank-Duplikatschutz (Hauptgast + Begleitung prüfen)
+            const duplicateMsg = checkDuplicateInDatabase(name, status === 'yes' && hasPartner === 'partner' ? partnerName : '');
+            if (duplicateMsg) {
+                errorBanner.textContent = duplicateMsg;
+                errorBanner.classList.remove('hidden');
+                return;
+            }
+
+            const payload = {
+                name,
+                normalizedName: normalizeName(name),
+                status,
+                hasPartner: status === 'yes' ? hasPartner : 'alone',
+                partnerName: status === 'yes' && hasPartner === 'partner' ? partnerName : '',
+                guestCount,
+                needsBed,
+                roomPref,
+                arrival,
+                departure,
+                note,
+                createdAtMs: Date.now()
+            };
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Wird gesendet...";
+
+            try {
+                if (!db) {
+                    throw new Error("Datenbank nicht initialisiert");
+                }
+                await addDoc(collection(db, ORGA_CONFIG.rsvpCollection), {
+                    ...payload,
+                    createdAt: serverTimestamp()
+                });
+
+                // Gerätesperre setzen und Bestätigungskarte anzeigen
+                try {
+                    localStorage.setItem(ORGA_CONFIG.storageKey, JSON.stringify(payload));
+                } catch (e) { /* ignore */ }
+
+                showAlreadySubmittedCard(payload);
+            } catch (err) {
+                console.error("Fehler beim Speichern in Firestore:", err);
+                errorBanner.textContent = "Die Verbindung zur Datenbank wurde blockiert. Bitte prüfe die Cloud Firestore Regeln in der Firebase Console.";
+                errorBanner.classList.remove('hidden');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Rückmeldung an Charlotte senden";
+            }
+        };
+
+        window.copyRsvpSummary = function() {
+            const name = document.getElementById('rsvp-name').value.trim() || '[Mein Name]';
+            const status = document.getElementById('rsvp-status').value;
+            const hasPartner = document.getElementById('rsvp-partner').value;
+            const partnerName = document.getElementById('rsvp-partner-name').value.trim();
+            const bedMode = document.getElementById('rsvp-bed-mode').value;
+            const arrival = formatDateShort(document.getElementById('rsvp-arrival').value);
+            const departure = formatDateShort(document.getElementById('rsvp-departure').value);
+            const note = document.getElementById('rsvp-note').value.trim();
+
+            let msg = `Liebe Charlotte,\n`;
+            if (status === 'yes') {
+                msg += `ich bin bei deinem 30. Geburtstag im Gutshaus Groß Markow sehr gerne dabei!\n`;
+                msg += `• Personen: ${hasPartner === 'partner' ? '2 Personen' + (partnerName ? ' (mit ' + partnerName + ')' : ' (mit Begleitung)') : '1 Person'}\n`;
+                if (bedMode !== 'no_bed') {
+                    const roomText = bedMode === 'share_bed'
+                        ? 'Halbes Doppelzimmer / Bettplatz'
+                        : 'Doppelzimmer';
+                    msg += `• Schlafplatz: Ja (${roomText})\n`;
+                    msg += `• Zeitraum: ${arrival}2027 bis ${departure}2027\n`;
+                } else {
+                    msg += `• Schlafplatz: Nein, nicht benötigt\n`;
+                }
+            } else {
+                msg += `leider kann ich am 10.09.2027 nicht dabei sein und muss absagen.\n`;
+            }
+            if (note) msg += `• Nachricht: ${note}\n`;
+            msg += `\nLiebe Grüße\n${name}`;
+
+            const tempArea = document.createElement('textarea');
+            tempArea.value = msg;
+            document.body.appendChild(tempArea);
+            tempArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempArea);
+
+            const fb = document.getElementById('copy-feedback');
+            fb.classList.remove('hidden');
+            setTimeout(() => fb.classList.add('hidden'), 3500);
+        };
+
+        // =========================================================================
+        // ORGA-DASHBOARD: PIN, SPEICHERN, LÖSCHEN & EXCEL-CSV-EXPORT
+        // =========================================================================
+        let isAdminUnlocked = false;
+
+        window.toggleAdminModal = function() {
+            const modal = document.getElementById('admin-modal');
+            modal.classList.toggle('hidden');
+            modal.classList.toggle('flex');
+            if (!modal.classList.contains('hidden')) {
+                if (isAdminUnlocked) {
+                    recalculateAll();
+                } else {
+                    setTimeout(() => document.getElementById('admin-pin-input')?.focus(), 80);
+                }
+            }
+        };
+
+        window.unlockAdmin = function() {
+            const val = document.getElementById('admin-pin-input').value.trim();
+            const errEl = document.getElementById('admin-pin-error');
+            if (val === ORGA_CONFIG.adminPin) {
+                isAdminUnlocked = true;
+                errEl.classList.add('hidden');
+                document.getElementById('admin-pin-gate').classList.add('hidden');
+                document.getElementById('admin-content').classList.remove('hidden');
+                recalculateAll();
+            } else {
+                errEl.classList.remove('hidden');
+            }
+        };
+
+        window.resetCostDefaults = function() {
+            document.getElementById('cost-rent').value = 2860;
+            document.getElementById('cost-power-kwh').value = 520;
+            document.getElementById('cost-power-rate').value = 0.42;
+            document.getElementById('cost-oil-liters').value = 280;
+            document.getElementById('cost-oil-rate').value = 1.15;
+            document.getElementById('cost-water-m3').value = 28;
+            document.getElementById('cost-water-rate').value = 5.50;
+            document.getElementById('cost-extra').value = 0;
+            document.getElementById('calc-target-nights').value = 60;
+            recalculateAll();
+        };
+
+        window.saveOrgaConfigToCloud = async function() {
+            const btn = document.getElementById('save-orga-btn');
+            const fb = document.getElementById('orga-save-feedback');
+            const invited = Math.max(1, Number(document.getElementById('admin-invited-input').value) || 38);
+            totalInvitedGuests = invited;
+            recalculateAll();
+
+            const configData = {
+                totalInvited: invited,
+                costRent: Number(document.getElementById('cost-rent').value) || 2860,
+                costPowerKwh: Number(document.getElementById('cost-power-kwh').value) || 0,
+                costPowerRate: Number(document.getElementById('cost-power-rate').value) || 0,
+                costOilLiters: Number(document.getElementById('cost-oil-liters').value) || 0,
+                costOilRate: Number(document.getElementById('cost-oil-rate').value) || 0,
+                costWaterM3: Number(document.getElementById('cost-water-m3').value) || 0,
+                costWaterRate: Number(document.getElementById('cost-water-rate').value) || 0,
+                costExtra: Number(document.getElementById('cost-extra').value) || 0,
+                targetRoomNights: Number(document.getElementById('calc-target-nights').value) || 60,
+                updatedAtMs: Date.now()
+            };
+
+            btn.disabled = true;
+            try {
+                if (db) {
+                    await setDoc(doc(db, ORGA_CONFIG.orgaCollection, ORGA_CONFIG.orgaDocId), configData, { merge: true });
+                }
+                fb.classList.remove('hidden');
+                setTimeout(() => fb.classList.add('hidden'), 3000);
+            } catch (err) {
+                console.error("Fehler beim Speichern der Orga-Einstellungen:", err);
+            } finally {
+                btn.disabled = false;
+            }
+        };
+
+        window.deleteRsvpEntry = async function(id) {
+            if (!id || !db) return;
+            try {
+                await deleteDoc(doc(db, ORGA_CONFIG.rsvpCollection, id));
+            } catch (err) {
+                console.error("Fehler beim Löschen aus Firestore:", err);
+            }
+        };
+
+        window.exportRsvpsToCsv = function() {
+            const costs = getCostBreakdown();
+            let totalActualZN = 0;
+            rsvpList.forEach(item => {
+                if (item.status === 'yes') {
+                    totalActualZN += calculateRoomShare(item) * calculateNights(item.arrival, item.departure);
+                }
+            });
+
+            const targetNights = Math.max(1, Number(document.getElementById('calc-target-nights')?.value) || 60);
+            const selectedBasis = document.querySelector('input[name="billing-basis"]:checked')?.value || 'actual';
+            const ratePerZN = selectedBasis === 'target'
+                ? (costs.grandTotal / targetNights)
+                : (totalActualZN > 0 ? costs.grandTotal / totalActualZN : 0);
+
+            const headers = [
+                'Name',
+                'Status',
+                'Personen',
+                'Begleitung',
+                'Name_Begleitung',
+                'Schlafplatz',
+                'Zimmeranteil_DZ',
+                'Anreise',
+                'Abreise',
+                'Uebernachtungen',
+                'Zimmernaechte',
+                'Kostenanteil_EUR',
+                'Nachricht'
+            ];
+
+            const rows = rsvpList.map(item => {
+                const share = calculateRoomShare(item);
+                const nights = item.status === 'yes' && item.needsBed === 'yes'
+                    ? calculateNights(item.arrival, item.departure)
+                    : 0;
+                const roomNights = share * nights;
+                const costShare = (roomNights * ratePerZN).toFixed(2).replace('.', ',');
+
+                return [
+                    item.name || '',
+                    item.status === 'yes' ? 'Zusage' : 'Absage',
+                    item.guestCount || 1,
+                    item.hasPartner === 'partner' ? 'Ja' : 'Nein',
+                    item.partnerName || '',
+                    item.needsBed === 'yes' ? 'Ja' : 'Nein',
+                    share > 0 ? String(share).replace('.', ',') : '0',
+                    item.arrival || '',
+                    item.departure || '',
+                    nights,
+                    String(roomNights).replace('.', ','),
+                    costShare,
+                    (item.note || '').replace(/;/g, ',')
+                ];
+            });
+
+            const csvContent = '\uFEFF' + [headers.join(';'), ...rows.map(r => r.join(';'))].join('\n');
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Charlottes_30_Gutshaus_Gross_Markow_2027.csv';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        };
+
+        window.handleLocalPhotoUpload = function(slot, inputEl) {
+            const file = inputEl.files && inputEl.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const dataUrl = e.target.result;
+                document.querySelectorAll(`img[data-photo-slot="${slot}"]`).forEach(img => {
+                    img.dataset.fallbackApplied = 'false';
+                    img.src = dataUrl;
+                });
+            };
+            reader.readAsDataURL(file);
+        };
+
+        // Start beim Laden der Seite
+        window.addEventListener('DOMContentLoaded', () => {
+            handleFormVisibility();
+            checkLocalSubmittedState();
+            initFirebase();
+        });
+    </script>
+</body>
+</html>
